@@ -21,14 +21,14 @@ export default async function Layout({
   // === REDIRECTS POR CAMADA ===
   if (userLayer === 3) {
     // Black - tráfego limpo
-    redirect('https://iamilionária.com');
+    redirect('https://iamilionaria.com');
   }
 
   if (userLayer === 2) {
     // Gray - intermediário
-    redirect('https://iamilionária.com/influencer');
+    redirect('https://iamilionaria.com/influencer');
   }
 
   // White - bots / sem parâmetro
-  redirect('https://iamilionária.com/ia');
+  redirect('https://iamilionaria.com/ia');
 }
