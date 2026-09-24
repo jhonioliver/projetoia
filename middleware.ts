@@ -5,9 +5,9 @@ const localTestParam = 'jabscnasjchasa';
 
 // PARAM LIST
 const paramList: Record<string, string> = {
-  'opportunity': 'kim',
-  'revealed': 'rock',
-  'exclusive': 'megan',
+  'oportunidade': 'oferta97',
+  'exclusivo': 'oferta197',
+  'grupo': 'grupo',
 };
 
 export function middleware(req: NextRequest) {

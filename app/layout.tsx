@@ -4,8 +4,8 @@ import { headers, cookies } from 'next/headers';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'YouTube Rewards',
-  description: 'This new YouTube tool is scaring experts around the world.',
+  title: 'IA Milionária',
+  description: 'Curso de IA',
 };
 
 export default async function Layout({
@@ -17,18 +17,25 @@ export default async function Layout({
   const hdrs = await headers();
 
   const userLayer = await getUserLayer({ cks, hdrs });
+  const content = cks.get('xcat_valid')?.value || '';
 
-  // === REDIRECTS POR CAMADA ===
+  // === BLACK - URLs diferentes por parâmetro ===
   if (userLayer === 3) {
-    // Black - tráfego limpo
-    redirect('https://iamilionaria.com');
+    const blackUrls: Record<string, string> = {
+      oferta97:      'https://iamilionaria.com',
+      oferta197:     'https://iamilionaria.com/oferta',
+      grupo:         'https://iamilionaria.com/grupo',
+    };
+
+    const target = blackUrls[content] || 'https://iamilionaria.com';
+    redirect(target);
   }
 
+  // === GRAY ===
   if (userLayer === 2) {
-    // Gray - intermediário
-    redirect('https://iamilionaria.com/influencer');
+    redirect('https://iamilionaria.com/ia');
   }
 
-  // White - bots / sem parâmetro
+  // === WHITE ===
   redirect('https://iamilionaria.com/ia');
 }
