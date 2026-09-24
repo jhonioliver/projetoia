@@ -1,0 +1,26 @@
+[00:00:04.188] Server  LOG     
+[00:00:04.188] Server  LOG        We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+[00:00:04.188] Server  LOG        The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+[00:00:04.188] Server  LOG        	- include was updated to add '.next/dev/types/**/*.ts'
+[00:00:04.188] Server  LOG     
+[00:00:04.188] Server  LOG        The following mandatory changes were made to your tsconfig.json:
+
+[00:00:04.189] Server  LOG        	- jsx was set to react-jsx (next.js uses the React automatic runtime)
+[00:00:04.189] Server  LOG     
+[00:00:04.210] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:04.454] Server  LOG      ✓ Ready in 3.8s
+[00:00:07.564] Server  LOG      ○ Compiling / ...
+[00:00:12.135] Server  LOG     HEADERS: {}
+[00:00:12.135] Server  LOG     HAS PARAM: false
+[00:00:12.136] Server  LOG     WHITE: SEM PARÂMETRO
+[00:00:13.203] Server  LOG     HEADERS: {}
+[00:00:13.203] Server  LOG     HAS PARAM: false
+[00:00:13.203] Server  LOG     WHITE: SEM PARÂMETRO
+[00:00:14.527] Server  LOG     HEADERS: {}
+[00:00:14.527] Server  LOG     HAS PARAM: false
+[00:00:14.528] Server  LOG     WHITE: SEM PARÂMETRO
+[00:00:15.085] Server  LOG     HEADERS: {}
+[00:00:15.085] Server  LOG     HAS PARAM: false
+[00:00:15.085] Server  LOG     WHITE: SEM PARÂMETRO
+[00:00:15.486] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
