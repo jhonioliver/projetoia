@@ -1,11 +1,12 @@
 import { redirect } from 'next/navigation';
+import WhiteContent from '@/components/pages/white/home';
 import { getUserLayer } from '@/utils/get-user-layer';
 import { headers, cookies } from 'next/headers';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'IA Milionária',
-  description: 'Curso de IA',
+  title: 'Método IA',
+  description: 'Inteligência Artificial',
 };
 
 export default async function Layout({
@@ -19,7 +20,7 @@ export default async function Layout({
   const userLayer = await getUserLayer({ cks, hdrs });
   const content = cks.get('xcat_valid')?.value || '';
 
-  // === BLACK - URLs diferentes por parâmetro ===
+  // === BLACK → redirect externo ===
   if (userLayer === 3) {
     const blackUrls: Record<string, string> = {
       oferta97:      'https://iamilionaria.com',
@@ -31,11 +32,23 @@ export default async function Layout({
     redirect(target);
   }
 
-  // === GRAY ===
+  // === GRAY → página interna ===
   if (userLayer === 2) {
-    redirect('https://iamilionaria.com/ia');
+    return (
+      <html lang="pt-BR">
+        <body className="antialiased">
+          <WhiteContent />
+        </body>
+      </html>
+    );
   }
 
-  // === WHITE ===
-  redirect('https://iamilionaria.com/ia');
+  // === WHITE → página interna ===
+  return (
+    <html lang="pt-BR">
+      <body className="antialiased">
+        <WhiteContent />
+      </body>
+    </html>
+  );
 }
